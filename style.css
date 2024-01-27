@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.search-bar {
+  color: white;
+  font-size: 10px;
+  background-color: green;
+  transition: all 300ms ease-in-out;
+  width: 100px;
+}
+
+.search-bar:hover {
+  color: green;
+  border-color: green;
+  background-color: white;
+  transform: translateY(-2px);
+}
+
+/* Carousel Styling */
+.carousel-inner {
+  border-radius: 20px;
+  position: relative;
+}
+
+.carousel-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 1; /* Place the overlay above the carousel content */
+}
+
+.carousel-inner img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Card Styling */
+.navbar .container a {
+  font-size: 25px;
+}
+
+.container a span {
+  color: green;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.card-container .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container .card img {
+  width: fit-content;
+  object-fit: cover;
+  height: 150px;
+}
+
+.card-container .card .card-text{
+    text-align: justify;
+}
+
+/* Maps Component */
+.container iframe {
+  max-width: 1920px;
+  width: 50%;
+  height: 250px;
+}
+
+/* Review Component */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 500px;
+}
+
+#reviewForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+/* Custom Animation */
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.float-animation {
+  animation: floatAnimation 5s infinite ease-in-out;
+}
